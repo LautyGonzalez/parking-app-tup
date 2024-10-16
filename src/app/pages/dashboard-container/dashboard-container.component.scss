@@ -1,0 +1,27 @@
+a {
+    color: white
+}
+
+.link-active{
+    border-bottom: solid 2px;
+    color: rgb(103 103 103);
+    padding-bottom: 3px;
+}
+
+header{
+    margin: 0;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+}
+
+h1{
+    padding-top: 3px;
+}

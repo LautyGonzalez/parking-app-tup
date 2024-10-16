@@ -1,0 +1,13 @@
+<header>
+    <h1>Parking APP</h1>
+    <nav>
+        <a [routerLink]="['/parking-status']" routerLinkActive="link-active">Estado Cocheras</a>
+        @if (esAdmin) {
+            <a [routerLink]="['/reportes']" routerLinkActive="link-active">Reportes</a>
+            <a [routerLink]="['/precios']" routerLinkActive="link-active">Precios</a>
+        }
+        <a [routerLink]="['/perfil']" routerLinkActive="link-active">Perfil</a>
+    </nav>
+</header>
+
+<router-outlet>

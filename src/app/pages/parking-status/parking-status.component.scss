@@ -1,0 +1,83 @@
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.table {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+img {
+  margin-top: 10px;
+  filter: drop-shadow(5px 6px 4px black);
+}
+
+.elements {
+  text-align: center;
+  gap: 20px;
+}
+
+.parking-card {
+  font-family: "Montserrat", system-ui;
+  border-radius: 10px;
+  width: 200px;
+  border: solid 1px;
+  text-align: center;
+  background-color: rgb(177, 177, 177);
+  color: white;
+}
+
+.parking-card-info {
+  margin: 10px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.parking-card-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #b0b0b0;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: inset 0px 10px 29px -17px rgba(0, 0, 0, 0.75);
+}
+
+#new-card {
+  font-size: 70px;
+  text-align: center;
+  height: 260px;
+}
+
+.delete-button {
+  padding-top: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0px 0px 10px 0px;
+  width: calc(99% / 2);
+}
+
+.customModal {
+  font-family: "Montserrat", system-ui;
+  background-color: #b0b0b0;
+  border-radius: 10px;
+}
+
+.parking-status {
+  height: 161px;
+}
+
+.addCar-button{
+  padding-top: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0px 0px 0px 10px;
+  width: calc(99% / 2);
+}
