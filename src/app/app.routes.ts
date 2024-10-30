@@ -24,6 +24,10 @@ export const routes: Routes = [
         path: "reportes",
         component: ReportesComponent,
         canActivate: [soloAdminGuard]
+      },
+      {
+        path: "precios",
+        component: PreciosComponent,
       }
     ]
   },
@@ -41,10 +45,7 @@ export const routes: Routes = [
     path: "parking-status",
     component: ParkingStatusComponent,
   },
-  {
-    path: "precios",
-    component: PreciosComponent,
-  },
+  
   // {
   //   path: "",
   //   redirectTo: "login",
