@@ -7,6 +7,6 @@ export const soloAdminGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
   if (dataAuthService.usuario?.esAdmin) return true;
-  const url = router.parseUrl('/parking-status');
+  const url = router.parseUrl('/login');
   return new RedirectCommand(url);
 };

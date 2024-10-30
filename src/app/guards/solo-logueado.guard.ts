@@ -7,6 +7,6 @@ export const soloLogueadoGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
   if (dataAuthService.usuario?.token !== null) return true;
-  const url = router.parseUrl('/reportes');
+  const url = router.parseUrl('/login');
   return new RedirectCommand(url);
 };

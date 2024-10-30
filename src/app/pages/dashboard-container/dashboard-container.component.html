@@ -6,8 +6,15 @@
             <a [routerLink]="['/reportes']" routerLinkActive="link-active">Reportes</a>
             <a [routerLink]="['/precios']" routerLinkActive="link-active">Precios</a>
         }
-        <a [routerLink]="['/perfil']" routerLinkActive="link-active">Perfil</a>
+        <div class="usuario" (mouseenter)="mostrarDropdown = true" (mouseleave)="mostrarDropdown = false">
+            <a>Perfil</a>
+            <div class="dropdown">
+                @if (mostrarDropdown) {
+                    <button (click)="cerrarSesion()">Cerrar Sesión</button>
+                }
+            </div>
+        </div>
     </nav>
 </header>
 
-<router-outlet>
+<router-outlet></router-outlet>

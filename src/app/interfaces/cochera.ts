@@ -1,7 +1,10 @@
+import { Estacionamiento } from "./estacionamiento";
+
 export interface Cochera{
-    img: string,
-    numero: number,
-    disponible: boolean,
-    ingreso: string,
-    acciones: string
+    id: number;
+    descripcion: string;
+    deshabilitada: number;
+    eliminada: number;
+    estacionamiento: Estacionamiento | undefined;
+    img?: string
 }

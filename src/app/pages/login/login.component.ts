@@ -3,8 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { Login, ResLogin } from '../../interfaces/login';
 import { DataAuthService } from '../../services/data-auth.service';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Token } from '@angular/compiler';
-import { tick } from '@angular/core/testing';
+import { DataCocherasService } from '../../services/data-cocheras.service';
 
 @Component({
   selector: 'app-login',
@@ -15,14 +14,15 @@ import { tick } from '@angular/core/testing';
 })
 export class LoginComponent {
 
-  authService = inject(DataAuthService);  
+  authService = inject(DataAuthService);
 
-  // loginData:Login = {
-  //   username: 'admin',
-  //   password: 'admin'
-  // }
+  //loginData:Login = {
+  //  username: 'admin',
+  //  password: 'admin'
+  //}
 
   router = inject(Router);
+
 
   //Login con .then
   // login(){
@@ -41,12 +41,18 @@ export class LoginComponent {
   //   })
   //   console.log('Despues del fetch')
   // }
+
   errorLogin = false;
   async login(loginForm: NgForm){
     const {usuario, password} = loginForm.value;
     const loginData: Login = {username: usuario, password}
     const res = await this.authService.login(loginData)
-    if(res?.status === "ok") this.router.navigate(['/parking-status']);
+
+    if(res?.statusText === "OK") 
+    {
+      this.router.navigate(['/parking-status']);
+    }
+    
     else this.errorLogin = true;
   }
 
